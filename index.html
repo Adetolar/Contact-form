@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div class="contact-Us__form container">
+      <div class="wrapper">
+        <p>Contact Us</p>
+        <form action="">
+          <div class="container_name">
+            <div class="input-group container_firstName">
+              <label for="firstName">First Name <span>*</span></label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder=""
+              />
+              <p class="error">This field is required</p>
+            </div>
+            <div class="input-group container_lastName">
+              <label for="lastName">Last Name <span>*</span></label>
+              <input type="text" name="lastName" id="lastName" placeholder="" />
+              <p class="error">This field is required</p>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="email">Email Address <span>*</span></label>
+            <input type="email" name="email" id="email" />
+            <p class="error">Please enter a valid email address</p>
+          </div>
+
+          <div class="input-group">
+            <label for="Query_Type">Query Type <span>*</span></label> <br />
+            <div class="query_wrapper">
+              <div class="Query_Type_container">
+                <div class="Query_Type-generalEnquiry">
+                  <input
+                    type="radio"
+                    id="generalEnquiry"
+                    name="Query_Type"
+                    value="General-Enquiry"
+                  />
+                  <label for="generalEnquiry">General Enquiry </label>
+                </div>
+                <div class="Query_Type-supportRequest">
+                  <input
+                    type="radio"
+                    id="supportRequest"
+                    name="Query_Type"
+                    value="Support-Request"
+                  />
+                  <label for=".">Support Request </label>
+                </div>
+              </div>
+              <p class="error">Please select a query type <span>*</span></p>
+            </div>
+          </div>
+
+          <div class="input-group txt-area">
+            <label for="message">Message <span>*</span></label> <br />
+            <textarea name="message"> </textarea>
+            <p class="error">This field is required</p>
+          </div>
+
+          <div class="input-group consent_wrapper">
+            <div class="consent_container">
+              <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                value="I consent to being contacted by the team"
+              />
+              <label for="consent">
+                I consent to being contacted by the team <span>*</span></label
+              ><br />
+            </div>
+            <p class="error">
+              To submit this form, please consent to being contacted
+            </p>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="success_message">
+        <p>Message Sent!</p>
+
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Adetolar</a>.
+    </footer>
+  </body>
+</html>

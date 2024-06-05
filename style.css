@@ -1,0 +1,217 @@
+:root {
+  --primary-light_green: hsl(148, 38%, 91%);
+  --primary-Green: hsl(169, 82%, 27%);
+  --primary-Red: hsl(0, 66%, 56%);
+
+  --neutral-White: hsl(0, 0%, 100%);
+  --neutral-Medium_Grey: hsl(186, 15%, 59%);
+  --neutral-darkGrey: hsl(187, 24%, 22%);
+}
+
+*::before,
+*::after,
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;
+  color: var(--neutral-darkGrey);
+  background-color: var(--primary-light_green);
+}
+
+/*footer styling code*/
+.attribution {
+  font-size: 1em;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/*footer styling code*/
+
+.container {
+  margin: 2em auto;
+  width: 90%;
+  max-width: 736px;
+  border-radius: 10px;
+  background-color: var(--neutral-White);
+}
+
+.contact-Us__form {
+  position: relative;
+}
+
+.wrapper {
+  margin: 1em auto;
+  width: 90%;
+}
+
+.wrapper p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.7em 0em;
+}
+
+.input-group {
+  margin-bottom: 1em;
+}
+
+#firstName,
+#lastName,
+#email,
+.Query_Type-generalEnquiry,
+.Query_Type-supportRequest,
+textarea,
+button {
+  font-size: 1rem;
+  margin: 0.5em auto 0.22em;
+  width: 100%;
+  border: 1px solid var(--neutral-Medium_Grey);
+  padding: 0.5em;
+  border-radius: 5px;
+  outline: none;
+}
+
+/*code use to posstion element side on large screen*/
+.Query_Type-generalEnquiry,
+.Query_Type-supportRequest,
+.consent_container {
+  display: flex;
+  gap: 0.7em;
+  align-items: center;
+  font-size: 1rem;
+}
+/*code use to posstion element side on large screen*/
+
+/* use in styling the * after the label heading */
+span {
+  margin-right: 10px;
+  color: var(--neutral-darkGrey);
+}
+/* use in styling the * after the label heading */
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 0.02em var(--primary-Green);
+}
+
+.Query_Type-supportRequest input:focus {
+  background-color: var(--neutral-Medium_Grey) !important ;
+}
+
+textarea {
+  min-height: 17em;
+}
+
+button {
+  background-color: var(--primary-Green);
+  color: var(--neutral-White);
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: var(--neutral-darkGrey);
+}
+
+/* code for hover  */
+.container_name input:hover,
+.consent_container label:hover {
+  cursor: pointer;
+}
+
+/* code for hover  */
+
+/* codes for error and sucesss state*/
+
+p.error {
+  display: none;
+  color: var(--primary-Red);
+  font-size: 1rem;
+  margin-bottom: 0.2em;
+}
+
+.input-group .Invalid + p.error {
+  display: block;
+  color: var(--primary-Red);
+  font-size: 1rem;
+  margin-bottom: 1.4em;
+  border: 0em;
+  outline: none;
+}
+
+.input-group .valid + p.error {
+  display: none;
+}
+
+.success p:nth-child(1) {
+  margin: 1.5em 0em;
+}
+.success_message {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 14px;
+  font-size: small;
+  text-align: center;
+  width: 90%;
+  background-color: var(--primary-Green);
+  color: var(--neutral-White);
+  padding: 2em;
+  border-radius: 10px;
+}
+/* codes for error and sucesss state*/
+
+.consent_container {
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 48em) {
+  body {
+    font-size: 1.125rem;
+  }
+
+  #firstName,
+  #lastName,
+  #email,
+  .Query_Type-generalEnquiry,
+  .Query_Type-supportRequest,
+  textarea {
+    font-size: 1.5rem;
+  }
+
+  .container_firstName,
+  .container_lastName {
+    width: 100%;
+  }
+  .container_name,
+  .Query_Type_container {
+    display: flex;
+    gap: 1em;
+  }
+
+  /* codes for sucesss state*/
+  .success_message {
+    display: none;
+    top: -35px;
+    left: 230px;
+    max-width: 27em;
+    padding: 1em;
+  }
+  /* codes for sucesss state*/
+
+  button {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 1.7em;
+  }
+
+  textarea {
+    min-height: 5em;
+  }
+}
